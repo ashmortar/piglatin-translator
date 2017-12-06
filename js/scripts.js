@@ -9,7 +9,7 @@
 
 //back end logic
 var pigLatin = function(string) {
-  if (string.match(/[^a-z]/i)) {
+  if (string.match(/[^a-z, " "]/i)) {
     return false;
   };
 
@@ -32,6 +32,9 @@ var pigLatin = function(string) {
         var b = string.slice(i, string.length);
         var pigString = b + a + "ay";
         return pigString;
+      }
+      else {
+        console.log("something is broken");
       }
     };
 };
