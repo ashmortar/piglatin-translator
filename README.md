@@ -21,7 +21,7 @@ _This program will take a string input by the user and output it in pig Latin_
 
 * _move "u" following a "q" if q is a beginning consonant (ex: input question output estionquay)_
 
-*_move "u" following a "q" if "q" is a consective consonant but not the first consonant (ex: input squeal output ealsquay)_
+*_move "u" following a "q" if "q" is a consecutive consonant but not the first consonant (ex: input squeal output ealsquay)_
 
 *_treat y as a consonant at the beginning of a word (ex: input yesterday output esterdayyay_)
 
