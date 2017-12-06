@@ -17,12 +17,17 @@ var pigLatin = function(string) {
     if (string.charAt(0).match(/[a, e, i, o, u]/i)) {
         string = string + "way";
         return string;
+    } else if ((string.charAt(i).match(/[u]/i)) && (string.charAt(i - 1).match(/[q]/i))){
+      var a = string.slice(0, i + 1);
+      var b = string.slice(i + 1, string.length);
+      var pigString = b + a + "ay";
+      return pigString;
     } else if (string.charAt(i).match(/[a, e, i, o, u]/i)) {
       var a = string.slice(0, i);
       var b = string.slice(i, string.length);
       var pigString = b + a + "ay";
       return pigString;
-      }
+    }
     };
 };
 
