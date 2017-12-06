@@ -2,9 +2,10 @@
 var pigLatin = function(string) {
   if (string.match(/[^a-z]/i)) {
     return false;
-  } else {
-    return true;
-  };
+  } else if ((string.length ===1) && (string.match(/[a, e, i, o, u]/i))) {
+    string = string + "ay";
+    return string;
+    };
 };
 
 
