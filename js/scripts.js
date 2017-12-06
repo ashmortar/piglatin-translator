@@ -2,10 +2,14 @@
 var pigLatin = function(string) {
   if (string.match(/[^a-z]/i)) {
     return false;
-  } else if ((string.length ===1) && (string.match(/[a, e, i, o, u]/i))) {
-    string = string + "ay";
-    return string;
-    };
+  } else if (string.charAt(0).match(/[a, e, i, o, u]/i)) {
+      string = string + "way";
+      return string;
+  } else if (string.charAt(0).match(/[^a, e, i, o, u]/i)) {
+    var stringAdd = string + string.charAt(0) + "ay";
+    var pigString = stringAdd.slice(1, stringAdd.length);
+    return pigString;
+  };
 };
 
 
